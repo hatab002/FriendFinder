@@ -63,7 +63,7 @@ button {
             <h3>
                 <label for="picLink">Link to your photo (Required)</label>
             </h3>
-            <input type="text" id="picLink" class="form-control" placeholder="Paste the link to your photo here!" required>
+            <input type="text" id="photo" class="form-control" placeholder="Paste the link to your photo here!" required>
         </div>
         <hr>
         <div class="form-group surveyQuestion">
@@ -249,6 +249,53 @@ button {
     </footer>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+    $('#submit').on("click", function(){
+        function formCheck (){
+            var validForm = true;
+            $('.form-control').each(function(){
+                if ($(this).val() === ""){
+                    validForm = false;
+                }
+            });
+            $('.answerChoice').each(function(){
+                if ($(this).val() === ""){
+                    validForm = false;
+                }
+            });
+            return validForm;
+        };
+
+        if(formCheck()){
+            var userInfo = {
+                name: $('#name').val(),
+                photo: $('#photo').val(),
+                scores: [
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val()
+                ]
+            }
+            var mainUrl = "http://localhost:8080";
+        $.post(mainUrl + "/api/friends", userInfo, function (info){
+            $('#matchName').text(info.name);
+            $('matchPhoto').attr("src", info.photo);
+            $('#matchModal').modal("toggle");
+        });
+        } else {alert("Please complete the whole form then hit submit")};
+        return false;
+
+    });
+    </script>
 </body>
 
 </html>
