@@ -1,0 +1,47 @@
+body {
+    margin: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(31, 16, 9);
+    background-image: url(http://www.myfreetextures.com/wp-content/uploads/2011/06/old-paper-floral-parchment-background-texture.jpg)
+}
+
+option {
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(31, 16, 9);
+    color: bisque;
+    width: 200px;
+    text-align: center
+}
+
+.jumbotron {
+    text-align: center;
+    border-radius: 10px;
+    background-image: url(https://www.therange.co.uk/_m3/7/1/1505316986_710.jpg)
+}
+
+.surveyQuestion {
+    border: none;
+    background-image: url(https://www.therange.co.uk/_m3/7/1/1505316986_710.jpg);
+    width: 50%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.answerChoice {
+    border-radius: 10px;
+    width: 200px;
+}
+
+.form-control {
+    width: 300px;
+}

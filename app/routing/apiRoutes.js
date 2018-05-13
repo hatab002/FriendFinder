@@ -1,9 +1,16 @@
+var friendList = require ("../data/friends")
+
+
+module.exports = function (app){
+
+
 app.get("/api/friends", (req, res) => {
-// list of all friends here
+    res.json(friendList);
 });
 
 
-// on click event 
 app.post("/api/friends", (req, res) => {
 // friend comparison here
 });
+
+};

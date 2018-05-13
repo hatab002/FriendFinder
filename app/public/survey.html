@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styleSheet.css">
+    <title>Friend Finder</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; font-weight: bolder">Friend Finder Survey</h1>
+    <form id="form">
+        <div class="form-group">
+            <h3>
+                <label for="name">Name (Required)</label>
+            </h3>
+            <input type="text" class="form-control" id="name" placeholder="Enter name here" required>
+            <br>
+            <h3>
+                <label for="picLink">Link to your photo (Required)</label>
+            </h3>
+            <input type="text" id="picLink" class="form-control" placeholder="Paste the link to your photo here!" required>
+        </div>
+        <hr>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 1</strong>
+            </h3>
+            <h4>
+                <label for="q1">I enjoy doing outdoors activities</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q1" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 2</strong>
+            </h3>
+            <h4>
+                <label for="q2">I'm the first one present at social events and the last to leave</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q2" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 3</strong>
+            </h3>
+            <h4>
+                <label for="q3">I love traveling, and have a long list of places to visit</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q3" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 4</strong>
+            </h3>
+            <h4>
+                <label for="q4">I'm more of go with the flow kinda person than a let's draw a flow diagram of our night</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q4" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 5</strong>
+            </h3>
+            <h4>
+                <label for="q5">I am really into music and love going to music festivals</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q5" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 6</strong>
+            </h3>
+            <h4>
+                <label for="q6">I'm really good at remembering people'</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q6" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 7</strong>
+            </h3>
+            <h4>
+                <label for="q7">I enjoy trying out new foods</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q7" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 8</strong>
+            </h3>
+            <h4>
+                <label for="q8">I enjoy exercise, it's more of a lifestyle at this point really...</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q8" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 9</strong>
+            </h3>
+            <h4>
+                <label for="q9">I'm not the best dancer out there, but I'm not afraid to take over the dance floor</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q9" aria-placeholder="Select an option">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group surveyQuestion">
+            <h3>
+                <strong> Question 10</strong>
+            </h3>
+            <h4>
+                <label for="q10">I'm a straight forward person. If I don't like you, you'll quickly find out</label>
+            </h4>
+            <br>
+            <select class="answerChoice" id="q10">
+                <option value="">Select an option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Agree</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-lg" id="submit">Submit</button>
+    </form>
+
+    <footer class="footer fixed-bottom">
+        <div class="container">
+            <p>
+                <a href="/api/friends"> API Friend's List</a> |
+                <a href="#">Github Repo</a>
+            </p>
+        </div>
+    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
