@@ -1,1 +1,1 @@
-# FriendFinder
+Friend Finder is an app that uses express.js, deployed to heroku.
