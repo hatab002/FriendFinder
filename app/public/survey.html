@@ -47,7 +47,10 @@ button {
 
 .form-control {
     width: 300px;
-}</style>
+
+}
+.matchPhoto {height: 150px; width: 150px;}
+</style>
         <title>Friend Finder</title>
 </head>
 
@@ -247,9 +250,28 @@ button {
             </p>
         </div>
     </footer>
+    <div id="matchModal" class="modal fade" role="dialog" style="text-align: center;">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title">Your Best Match is ...</h2>
+                  <button type="button" class="close closing" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+                <div class="modal-body">
+                  <h1 id="matchName"></h1>
+                  <img id="matchPhoto" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Dclubley_stick_figure.png" alt="Match Photo">
+                </div>
+                <div class="modal-footer">
+                  <button id="modalBtn" type="button" class="btn btn-lg closing" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script>
     $('#submit').on("click", function(){
@@ -288,13 +310,16 @@ button {
             var mainUrl = "http://localhost:8080";
         $.post(mainUrl + "/api/friends", userInfo, function (info){
             $('#matchName').text(info.name);
-            $('matchPhoto').attr("src", info.photo);
+            $('#matchPhoto').attr("src", info.photo);
             $('#matchModal').modal("toggle");
         });
         } else {alert("Please complete the whole form then hit submit")};
         return false;
 
     });
+        $('.closing').on('click', function (){
+            location.reload();
+        })
     </script>
 </body>
 
