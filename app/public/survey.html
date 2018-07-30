@@ -307,8 +307,8 @@ button {
                     $('#q10').val()
                 ]
             }
-            var mainUrl = "http://localhost:8080";
-        $.post(mainUrl + "/api/friends", userInfo, function (info){
+            
+        $.post("/api/friends", userInfo, function (info){
             $('#matchName').text(info.name);
             $('#matchPhoto').attr("src", info.photo);
             $('#matchModal').modal("toggle");
